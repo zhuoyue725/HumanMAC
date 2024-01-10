@@ -77,22 +77,23 @@ class Trainer:
 
     def run_train_step(self):
 
-        for traj_np in self.generator_train:
+        for traj_np in self.generator_train: # (128, 125, 17, 3)
             with torch.no_grad():
                 # (N, t_his + t_pre, joints, 3) -> (N, t_his + t_pre, 3 * (joints - 1))
                 # discard the root joint and combine xyz coordinate
-                traj_np = traj_np[..., 1:, :].reshape([traj_np.shape[0], self.cfg.t_his + self.cfg.t_pred, -1])
-                traj = tensor(traj_np, device=self.cfg.device, dtype=self.cfg.dtype)
-                traj_pad = padding_traj(traj, self.cfg.padding, self.cfg.idx_pad, self.cfg.zero_index)
-                traj_dct = torch.matmul(self.cfg.dct_m_all[:self.cfg.n_pre], traj)
-                traj_dct_mod = torch.matmul(self.cfg.dct_m_all[:self.cfg.n_pre], traj_pad)
-                if np.random.random() > self.cfg.mod_train:
-                    traj_dct_mod = None
+                traj_np = traj_np[..., 1:, :].reshape([traj_np.shape[0], self.cfg.t_his + self.cfg.t_pred, -1]) # (128, 125, 48)
+                traj = tensor(traj_np, device=self.cfg.device, dtype=self.cfg.dtype) # (128, 125, 48)
+                traj_pad = padding_traj(traj, self.cfg.padding, self.cfg.idx_pad, self.cfg.zero_index) # (128, 125, 48)
+                traj_dct = torch.matmul(self.cfg.dct_m_all[:self.cfg.n_pre], traj) # (128, 20, 48)
+                traj_dct_mod = torch.matmul(self.cfg.dct_m_all[:self.cfg.n_pre], traj_pad)# (128, 20, 48)
+                # if np.random.random() > self.cfg.mod_train: # 为什么随机设置为None？
+                #     traj_dct_mod = None
 
             # train
-            t = self.diffusion.sample_timesteps(traj.shape[0]).to(self.cfg.device)
-            x_t, noise = self.diffusion.noise_motion(traj_dct, t)
-            predicted_noise = self.model(x_t, t, mod=traj_dct_mod)
+            t = self.diffusion.sample_timesteps(traj.shape[0]).to(self.cfg.device) # batchsize个t
+            x_t, noise = self.diffusion.noise_motion(traj_dct, t) # x_t(128, 20, 48)，noise(128, 20, 48) 就是Ɛ 高斯噪声
+            predicted_noise = self.model(x_t, t, mod=traj_dct_mod) # x_t是重参数化计算的运动噪声序列，(128, 20, 48)
+            # predicted_noise = self.model(x_t, traj_pad, t, mod=traj_dct_mod) # (128, 20, 48)
             loss = self.criterion(predicted_noise, noise)
 
             self.optimizer.zero_grad()
@@ -131,24 +132,24 @@ class Trainer:
         self.logger.info(f"Starting val epoch {self.iter}:")
 
     def run_val_step(self):
-        for traj_np in self.generator_val:
+        for traj_np in self.generator_val: # (128, 125, 17, 3)
             with torch.no_grad():
                 # (N, t_his + t_pre, joints, 3) -> (N, t_his + t_pre, 3 * (joints - 1))
                 # discard the root joint and combine xyz coordinate
-                traj_np = traj_np[..., 1:, :].reshape([traj_np.shape[0], self.cfg.t_his + self.cfg.t_pred, -1])
+                traj_np = traj_np[..., 1:, :].reshape([traj_np.shape[0], self.cfg.t_his + self.cfg.t_pred, -1]) # (128, 125, 48)
                 traj = tensor(traj_np, device=self.cfg.device, dtype=self.cfg.dtype)
-                traj_pad = padding_traj(traj, self.cfg.padding, self.cfg.idx_pad,
+                traj_pad = padding_traj(traj, self.cfg.padding, self.cfg.idx_pad, # 填充 (128, 125, 48)
                                         self.cfg.zero_index)  #
                 # [n_pre × (t_his + t_pre)] matmul [(t_his + t_pre) × 3 * (joints - 1)]
+                # 转换到DCT
+                traj_dct = torch.matmul(self.cfg.dct_m_all[:self.cfg.n_pre], traj) #  (128, 20, 48)
+                traj_dct_mod = torch.matmul(self.cfg.dct_m_all[:self.cfg.n_pre], traj_pad) # 观测DCT (128, 20, 48)
+                # if np.random.random() > self.cfg.mod_train:
+                    # traj_dct_mod = None
 
-                traj_dct = torch.matmul(self.cfg.dct_m_all[:self.cfg.n_pre], traj)
-                traj_dct_mod = torch.matmul(self.cfg.dct_m_all[:self.cfg.n_pre], traj_pad)
-                if np.random.random() > self.cfg.mod_train:
-                    traj_dct_mod = None
-
-                t = self.diffusion.sample_timesteps(traj.shape[0]).to(self.cfg.device)
-                x_t, noise = self.diffusion.noise_motion(traj_dct, t)
-                predicted_noise = self.model(x_t, t, mod=traj_dct_mod)
+                t = self.diffusion.sample_timesteps(traj.shape[0]).to(self.cfg.device) # 128
+                x_t, noise = self.diffusion.noise_motion(traj_dct, t) # (128, 20, 48)   (128, 20, 48)
+                predicted_noise = self.model(x_t, t, mod=traj_dct_mod)# (128, 20, 48)
                 loss = self.criterion(predicted_noise, noise)
 
                 self.val_losses.update(loss.item())
@@ -160,7 +161,7 @@ class Trainer:
         self.logger.info('====> Epoch: {} Time: {:.2f} Val Loss: {}'.format(self.iter,
                                                                             time.time() - self.t_s,
                                                                             self.val_losses.avg))
-
+        # Inference 渲染GIF
         if self.iter % self.cfg.save_gif_interval == 0:
             if self.cfg.ema is True:
                 pose_gen = pose_generator(self.dataset['test'], self.ema_model, self.diffusion, self.cfg, mode='gif')

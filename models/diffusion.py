@@ -100,6 +100,8 @@ class Diffusion:
         else:
             raise NotImplementedError(f"unknown scheduler: {self.scheduler}")
 
+    # 利用重参数化技巧，直接从y0（原始序列）和Ɛ，得到yt，而不是从yt-1得到yt
+    # 返回xt，添加的噪声
     def noise_motion(self, x, t):
         sqrt_alpha_hat = torch.sqrt(self.alpha_hat[t])[:, None, None]
         sqrt_one_minus_alpha_hat = torch.sqrt(1 - self.alpha_hat[t])[:, None, None]
@@ -115,9 +117,9 @@ class Diffusion:
 
         Args:
             step: current diffusion timestep
-            x: x in prev_t step
-            prev_t:  timestep in prev_t
-            traj_dct: DCT coefficient of the traj,
+            x: x in prev_t step 预测序列
+            prev_t:  timestep in prev_t 
+            traj_dct: DCT coefficient of the traj, 观测序列
                     shape as [sample_num, n_pre, 3 * joints_num]
             mode_dict: mode helper dict as sample_ddim()
 
@@ -129,13 +131,13 @@ class Diffusion:
                                         mode_dict['traj_fix'])  # transform to DCT domain for adding noise
             x_prev_t_known, _ = self.noise_motion(traj_dct_fix, prev_t)
         else:
-            x_prev_t_known, _ = self.noise_motion(traj_dct, prev_t)  # add noise in DCT domain
+            x_prev_t_known, _ = self.noise_motion(traj_dct, prev_t)  # add noise in DCT domain  [5, 20, 48]
 
-        x_prev_t_known = torch.matmul(self.idct[:, :self.n_pre],
-                                      x_prev_t_known[:, :self.n_pre])  # return time domain for mask
-        x_prev_t_unknown = torch.matmul(self.idct[:, :self.n_pre],
-                                        x[:, :self.n_pre])
-        x = torch.mul(mode_dict['mask'], x_prev_t_known) + torch.mul((1 - mode_dict['mask']), x_prev_t_unknown)  # mask
+        x_prev_t_known = torch.matmul(self.idct[:, :self.n_pre], # [125,20] matmul [5,20,48] 得到  [5, 125, 48]
+                                      x_prev_t_known[:, :self.n_pre])  # return time domain for mask  观测序列变为时域
+        x_prev_t_unknown = torch.matmul(self.idct[:, :self.n_pre], # 预测序列也变为时域 for mask [5, 125, 48]
+                                        x[:, :self.n_pre])# [125,20] matmul [5,20,48] 得到  [5, 125, 48]
+        x = torch.mul(mode_dict['mask'], x_prev_t_known) + torch.mul((1 - mode_dict['mask']), x_prev_t_unknown)  # mask [5, 125, 48]
 
         if mode_dict['mode'] == 'switch':
             if step < 20:  # relax to make switch smoother
@@ -146,7 +148,7 @@ class Diffusion:
                 x_prev_t_end_known = torch.matmul(self.idct[:, :self.n_pre], x_prev_t_end_known[:, :self.n_pre])
                 x = torch.mul(mode_dict['mask_end'], x_prev_t_end_known) + torch.mul((1 - mode_dict['mask_end']), x)
 
-        x = torch.matmul(self.dct[:self.n_pre], x)
+        x = torch.matmul(self.dct[:self.n_pre], x) # 回到DCT？为什么变成了[5, 20, 48]
 
         return x
 
@@ -167,22 +169,22 @@ class Diffusion:
 
         with torch.no_grad():
             for i in reversed(range(0, self.ddim_timesteps)):
-                t = (torch.ones(sample_num) * self.ddim_timestep_seq[i]).long().to(self.device)
-                prev_t = (torch.ones(sample_num) * self.ddim_timestep_prev_seq[i]).long().to(self.device)
+                t = (torch.ones(sample_num) * self.ddim_timestep_seq[i]).long().to(self.device)  # sample_num个  比如991
+                prev_t = (torch.ones(sample_num) * self.ddim_timestep_prev_seq[i]).long().to(self.device) # 比如981
 
-                alpha_hat = self.alpha_hat[t][:, None, None]
-                alpha_hat_prev = self.alpha_hat[prev_t][:, None, None]
+                alpha_hat = self.alpha_hat[t][:, None, None] # [5, 1, 1]
+                alpha_hat_prev = self.alpha_hat[prev_t][:, None, None] # [5, 1, 1]
 
-                predicted_noise = model(x, t, mod=traj_dct_mod)
+                predicted_noise = model(x, t, mod=traj_dct_mod) # [5, 20, 48]
 
-                predicted_x0 = (x - torch.sqrt((1. - alpha_hat)) * predicted_noise) / torch.sqrt(alpha_hat)
-                pred_dir_xt = torch.sqrt(1 - alpha_hat_prev) * predicted_noise
-                x_prev = torch.sqrt(alpha_hat_prev) * predicted_x0 + pred_dir_xt
+                predicted_x0 = (x - torch.sqrt((1. - alpha_hat)) * predicted_noise) / torch.sqrt(alpha_hat) # [5, 20, 48]
+                pred_dir_xt = torch.sqrt(1 - alpha_hat_prev) * predicted_noise  # [5, 20, 48]
+                x_prev = torch.sqrt(alpha_hat_prev) * predicted_x0 + pred_dir_xt # [5, 20, 48]
 
-                x = x_prev
+                x = x_prev # [5, 20, 48] 去噪结果?为什么只有20帧？
 
                 if self.EnableComplete is True:
-                    x = self.inpaint_complete(i,
+                    x = self.inpaint_complete(i,  # 去噪结果中mask添加已知的观测序列
                                               x,
                                               prev_t,
                                               traj_dct,

@@ -43,7 +43,7 @@ def padding_traj(traj, padding, idx_pad, zero_index):
 def post_process(pred, cfg):
     pred = pred.reshape(pred.shape[0], pred.shape[1], -1, 3)
     pred = np.concatenate((np.tile(np.zeros((1, cfg.t_his + cfg.t_pred, 1, 3)), (pred.shape[0], 1, 1, 1)), pred),
-                          axis=2)
+                          axis=2) # Root (5, 125, 1, 3)
     pred[..., :1, :] = 0
     return pred
 

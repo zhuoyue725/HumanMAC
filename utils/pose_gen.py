@@ -55,7 +55,7 @@ def pose_generator(data_set, model_select, diffusion, cfg, mode=None,
                                                    traj_dct_mod,
                                                    mode_dict)
 
-            traj_est = torch.matmul(cfg.idct_m_all[:, :cfg.n_pre], sampled_motion)
+            traj_est = torch.matmul(cfg.idct_m_all[:, :cfg.n_pre], sampled_motion) # IDCT B, 20, D => B,125,D
             traj_est = traj_est.cpu().numpy()
             traj_est = post_process(traj_est, cfg)
 

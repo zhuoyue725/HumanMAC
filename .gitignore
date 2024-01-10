@@ -1,0 +1,8 @@
+
+results/h36m_*
+inference/switch_*
+inference/pred_*
+checkpoints/*
+data/*
+data_loader/__pycache__
+utils/__pycache__

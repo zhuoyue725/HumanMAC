@@ -300,8 +300,8 @@ def render_animation(skeleton, poses_generator, algos, t_hist, fix_0=True, azim=
     fig.canvas.mpl_connect('key_press_event', on_key)
     
     save()
-    show_animation()
-    plt.show()
-    plt.close()
+    # show_animation()
+    # plt.show()
+    # plt.close()
     
     # save_figs()

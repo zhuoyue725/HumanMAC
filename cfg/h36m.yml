@@ -1,7 +1,7 @@
 dataset: 'h36m'
 t_his: 25
 t_pred: 100
-batch_size: 64
+batch_size: 128
 num_epoch: 1001
 num_data_sample: 50000
 num_val_data_sample: 5000
@@ -14,7 +14,7 @@ Complete: True
 noise_steps: 1000
 ddim_timesteps: 100
 scheduler: 'Cosine' # 'Cosine' 'Linear' 'Sqrt' 'Sigmoid'
-num_layers: 8
+num_layers: 10
 num_heads: 8
 latent_dims: 512
 dropout: 0.2
