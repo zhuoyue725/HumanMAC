@@ -1,0 +1,833 @@
+================================================================================
+{'id': 'h36m', 'dataset': 'h36m', 'batch_size': 128, 'normalize_data': False, 't_his': 25, 't_pred': 100, 'num_epoch': 1001, 'num_data_sample': 50000, 'num_val_data_sample': 5000, 'lr': 0.0003, 'n_pre': 20, 'padding': 'LastFrame', 'Complete': True, 'noise_steps': 1000, 'ddim_timesteps': 100, 'scheduler': 'Cosine', 'num_layers': 10, 'latent_dims': 512, 'dropout': 0.1, 'num_heads': 8, 'mod_train': 0.8, 'mod_test': 1.0, 'joint_num': 16, 'cfg': 'h36m', 'mode': 'train', 'iter': 0, 'seed': 0, 'device': device(type='cuda'), 'multimodal_threshold': 0.5, 'multimodal_th_high': 0.1, 'milestone': [75, 150, 225, 275, 350, 450], 'gamma': 0.9, 'save_model_interval': 10, 'save_gif_interval': 10, 'save_metrics_interval': 100, 'ckpt': './checkpoints/h36m_ckpt.pt', 'ema': True, 'vis_switch_num': 10, 'vis_col': 5, 'vis_row': 3, 'dtype': torch.float32}
+================================================================================
+>>> total params: 35.76M
+preparing full evaluation dataset...
+================================================================================
+#1 future: 73/5168
+#<10 future: 1011/5168
+done...
+================================================================================
+Starting training epoch 0:
+====> Epoch: 0 Time: 19.20 Train Loss: 0.1260689108990706 lr: 0.00030
+Starting val epoch 0:
+====> Epoch: 0 Time: 0.56 Val Loss: 0.07298434678560649
+Starting training epoch 1:
+====> Epoch: 1 Time: 19.23 Train Loss: 0.0689350892813542 lr: 0.00030
+Starting val epoch 1:
+====> Epoch: 1 Time: 0.58 Val Loss: 0.06403571099807055
+Starting training epoch 2:
+====> Epoch: 2 Time: 19.17 Train Loss: 0.05894939301487727 lr: 0.00030
+Starting val epoch 2:
+====> Epoch: 2 Time: 0.56 Val Loss: 0.05387058376501768
+Starting training epoch 3:
+====> Epoch: 3 Time: 19.15 Train Loss: 0.056604859232902524 lr: 0.00030
+Starting val epoch 3:
+====> Epoch: 3 Time: 0.55 Val Loss: 0.05420333958971195
+Starting training epoch 4:
+====> Epoch: 4 Time: 19.24 Train Loss: 0.053635506542065205 lr: 0.00030
+Starting val epoch 4:
+====> Epoch: 4 Time: 0.56 Val Loss: 0.05162561522462429
+Starting training epoch 5:
+====> Epoch: 5 Time: 19.30 Train Loss: 0.05227224923288211 lr: 0.00030
+Starting val epoch 5:
+====> Epoch: 5 Time: 0.57 Val Loss: 0.0485138995334124
+Starting training epoch 6:
+====> Epoch: 6 Time: 19.21 Train Loss: 0.050251425807483686 lr: 0.00030
+Starting val epoch 6:
+====> Epoch: 6 Time: 0.56 Val Loss: 0.046107325702905655
+Starting training epoch 7:
+====> Epoch: 7 Time: 19.34 Train Loss: 0.049733545583410144 lr: 0.00030
+Starting val epoch 7:
+====> Epoch: 7 Time: 0.57 Val Loss: 0.048056589296230905
+Starting training epoch 8:
+====> Epoch: 8 Time: 19.33 Train Loss: 0.048067374121493256 lr: 0.00030
+Starting val epoch 8:
+====> Epoch: 8 Time: 0.57 Val Loss: 0.042489719505493455
+Starting training epoch 9:
+====> Epoch: 9 Time: 19.35 Train Loss: 0.04715318955385532 lr: 0.00030
+Starting val epoch 9:
+====> Epoch: 9 Time: 0.57 Val Loss: 0.04632583069495666
+Starting training epoch 10:
+====> Epoch: 10 Time: 19.36 Train Loss: 0.046209882247524384 lr: 0.00030
+Starting val epoch 10:
+====> Epoch: 10 Time: 0.57 Val Loss: 0.04586939394282989
+Starting training epoch 11:
+====> Epoch: 11 Time: 19.32 Train Loss: 0.04604687955325995 lr: 0.00030
+Starting val epoch 11:
+====> Epoch: 11 Time: 0.56 Val Loss: 0.04215151463181545
+Starting training epoch 12:
+====> Epoch: 12 Time: 19.28 Train Loss: 0.04503662008314561 lr: 0.00030
+Starting val epoch 12:
+====> Epoch: 12 Time: 0.56 Val Loss: 0.04359635858772657
+Starting training epoch 13:
+====> Epoch: 13 Time: 19.30 Train Loss: 0.04462799389297382 lr: 0.00030
+Starting val epoch 13:
+====> Epoch: 13 Time: 0.57 Val Loss: 0.0420477926157988
+Starting training epoch 14:
+====> Epoch: 14 Time: 19.23 Train Loss: 0.04486910524085546 lr: 0.00030
+Starting val epoch 14:
+====> Epoch: 14 Time: 0.58 Val Loss: 0.04054035294132355
+Starting training epoch 15:
+====> Epoch: 15 Time: 19.26 Train Loss: 0.043557125329971316 lr: 0.00030
+Starting val epoch 15:
+====> Epoch: 15 Time: 0.57 Val Loss: 0.043753326655580446
+Starting training epoch 16:
+====> Epoch: 16 Time: 19.33 Train Loss: 0.04322334803545322 lr: 0.00030
+Starting val epoch 16:
+====> Epoch: 16 Time: 0.57 Val Loss: 0.040232197691996895
+Starting training epoch 17:
+====> Epoch: 17 Time: 19.36 Train Loss: 0.042512524500489236 lr: 0.00030
+Starting val epoch 17:
+====> Epoch: 17 Time: 0.58 Val Loss: 0.04162955021437926
+Starting training epoch 18:
+====> Epoch: 18 Time: 19.31 Train Loss: 0.04234941216806571 lr: 0.00030
+Starting val epoch 18:
+====> Epoch: 18 Time: 0.58 Val Loss: 0.04157216574710149
+Starting training epoch 19:
+====> Epoch: 19 Time: 19.28 Train Loss: 0.04311008434265088 lr: 0.00030
+Starting val epoch 19:
+====> Epoch: 19 Time: 0.56 Val Loss: 0.03886957590778669
+Starting training epoch 20:
+====> Epoch: 20 Time: 19.32 Train Loss: 0.04127419805393005 lr: 0.00030
+Starting val epoch 20:
+====> Epoch: 20 Time: 0.60 Val Loss: 0.03937393140334349
+Starting training epoch 21:
+====> Epoch: 21 Time: 19.28 Train Loss: 0.04144801155496866 lr: 0.00030
+Starting val epoch 21:
+====> Epoch: 21 Time: 0.57 Val Loss: 0.038405581401326716
+Starting training epoch 22:
+====> Epoch: 22 Time: 19.32 Train Loss: 0.04107150956988335 lr: 0.00030
+Starting val epoch 22:
+====> Epoch: 22 Time: 0.57 Val Loss: 0.03896218146651219
+Starting training epoch 23:
+====> Epoch: 23 Time: 19.32 Train Loss: 0.040417917335453704 lr: 0.00030
+Starting val epoch 23:
+====> Epoch: 23 Time: 0.57 Val Loss: 0.036729708791543275
+Starting training epoch 24:
+====> Epoch: 24 Time: 19.33 Train Loss: 0.04045640097883267 lr: 0.00030
+Starting val epoch 24:
+====> Epoch: 24 Time: 0.57 Val Loss: 0.03813775991782164
+Starting training epoch 25:
+====> Epoch: 25 Time: 19.33 Train Loss: 0.04012696527135678 lr: 0.00030
+Starting val epoch 25:
+====> Epoch: 25 Time: 0.56 Val Loss: 0.04031869501639635
+Starting training epoch 26:
+====> Epoch: 26 Time: 19.32 Train Loss: 0.04095417434970538 lr: 0.00030
+Starting val epoch 26:
+====> Epoch: 26 Time: 0.57 Val Loss: 0.03775062727240416
+Starting training epoch 27:
+====> Epoch: 27 Time: 19.27 Train Loss: 0.03981489376761974 lr: 0.00030
+Starting val epoch 27:
+====> Epoch: 27 Time: 0.55 Val Loss: 0.039489261423930146
+Starting training epoch 28:
+====> Epoch: 28 Time: 19.31 Train Loss: 0.04032107366678806 lr: 0.00030
+Starting val epoch 28:
+====> Epoch: 28 Time: 0.56 Val Loss: 0.038400560760727294
+Starting training epoch 29:
+====> Epoch: 29 Time: 19.27 Train Loss: 0.0397336022164195 lr: 0.00030
+Starting val epoch 29:
+====> Epoch: 29 Time: 0.57 Val Loss: 0.037503369248066194
+Starting training epoch 30:
+====> Epoch: 30 Time: 19.29 Train Loss: 0.039064580612839794 lr: 0.00030
+Starting val epoch 30:
+====> Epoch: 30 Time: 0.59 Val Loss: 0.038440546546226896
+Starting training epoch 31:
+====> Epoch: 31 Time: 19.37 Train Loss: 0.03899081140183486 lr: 0.00030
+Starting val epoch 31:
+====> Epoch: 31 Time: 0.56 Val Loss: 0.03875413484489306
+Starting training epoch 32:
+====> Epoch: 32 Time: 19.29 Train Loss: 0.03860685171989294 lr: 0.00030
+Starting val epoch 32:
+====> Epoch: 32 Time: 0.57 Val Loss: 0.036497377623350195
+Starting training epoch 33:
+====> Epoch: 33 Time: 19.38 Train Loss: 0.03862258219757141 lr: 0.00030
+Starting val epoch 33:
+====> Epoch: 33 Time: 0.56 Val Loss: 0.036774506410345055
+Starting training epoch 34:
+====> Epoch: 34 Time: 19.35 Train Loss: 0.038788223868379226 lr: 0.00030
+Starting val epoch 34:
+====> Epoch: 34 Time: 0.56 Val Loss: 0.03572879363902104
+Starting training epoch 35:
+====> Epoch: 35 Time: 19.36 Train Loss: 0.03760063332529404 lr: 0.00030
+Starting val epoch 35:
+====> Epoch: 35 Time: 0.58 Val Loss: 0.03651457790953991
+Starting training epoch 36:
+====> Epoch: 36 Time: 19.31 Train Loss: 0.03802694045962431 lr: 0.00030
+Starting val epoch 36:
+====> Epoch: 36 Time: 0.57 Val Loss: 0.03318025023700335
+Starting training epoch 37:
+====> Epoch: 37 Time: 19.34 Train Loss: 0.03805409257228558 lr: 0.00030
+Starting val epoch 37:
+====> Epoch: 37 Time: 0.58 Val Loss: 0.0366902799369433
+Starting training epoch 38:
+====> Epoch: 38 Time: 19.32 Train Loss: 0.037743082384650524 lr: 0.00030
+Starting val epoch 38:
+====> Epoch: 38 Time: 0.57 Val Loss: 0.03727839294916544
+Starting training epoch 39:
+====> Epoch: 39 Time: 19.32 Train Loss: 0.037423775545679605 lr: 0.00030
+Starting val epoch 39:
+====> Epoch: 39 Time: 0.57 Val Loss: 0.03631522912436571
+Starting training epoch 40:
+====> Epoch: 40 Time: 19.32 Train Loss: 0.03800622260150237 lr: 0.00030
+Starting val epoch 40:
+====> Epoch: 40 Time: 0.58 Val Loss: 0.03546390978571696
+Starting training epoch 41:
+====> Epoch: 41 Time: 19.33 Train Loss: 0.03656465026717155 lr: 0.00030
+Starting val epoch 41:
+====> Epoch: 41 Time: 0.58 Val Loss: 0.03531204612973409
+Starting training epoch 42:
+====> Epoch: 42 Time: 19.32 Train Loss: 0.03686735994445208 lr: 0.00030
+Starting val epoch 42:
+====> Epoch: 42 Time: 0.57 Val Loss: 0.03482181812899235
+Starting training epoch 43:
+====> Epoch: 43 Time: 19.29 Train Loss: 0.03657845740612501 lr: 0.00030
+Starting val epoch 43:
+====> Epoch: 43 Time: 0.57 Val Loss: 0.03589326936082962
+Starting training epoch 44:
+====> Epoch: 44 Time: 19.30 Train Loss: 0.03701695758753862 lr: 0.00030
+Starting val epoch 44:
+====> Epoch: 44 Time: 0.59 Val Loss: 0.03401517638793358
+Starting training epoch 45:
+====> Epoch: 45 Time: 19.34 Train Loss: 0.036194407997223045 lr: 0.00030
+Starting val epoch 45:
+====> Epoch: 45 Time: 0.56 Val Loss: 0.03497659844847826
+Starting training epoch 46:
+====> Epoch: 46 Time: 19.29 Train Loss: 0.0367791435514123 lr: 0.00030
+Starting val epoch 46:
+====> Epoch: 46 Time: 0.56 Val Loss: 0.0365157913034543
+Starting training epoch 47:
+====> Epoch: 47 Time: 19.34 Train Loss: 0.036689707794441626 lr: 0.00030
+Starting val epoch 47:
+====> Epoch: 47 Time: 0.56 Val Loss: 0.03558142884419514
+Starting training epoch 48:
+====> Epoch: 48 Time: 19.31 Train Loss: 0.035734211042141306 lr: 0.00030
+Starting val epoch 48:
+====> Epoch: 48 Time: 0.57 Val Loss: 0.035555604606484756
+Starting training epoch 49:
+====> Epoch: 49 Time: 19.25 Train Loss: 0.0358751629312069 lr: 0.00030
+Starting val epoch 49:
+====> Epoch: 49 Time: 0.56 Val Loss: 0.03471669091437107
+Starting training epoch 50:
+====> Epoch: 50 Time: 19.29 Train Loss: 0.035328768031337325 lr: 0.00030
+Starting val epoch 50:
+====> Epoch: 50 Time: 0.58 Val Loss: 0.03539444993321712
+Starting training epoch 51:
+====> Epoch: 51 Time: 19.30 Train Loss: 0.035159152961121154 lr: 0.00030
+Starting val epoch 51:
+====> Epoch: 51 Time: 0.57 Val Loss: 0.03652102056031044
+Starting training epoch 52:
+====> Epoch: 52 Time: 19.26 Train Loss: 0.03593095986124797 lr: 0.00030
+Starting val epoch 52:
+====> Epoch: 52 Time: 0.56 Val Loss: 0.03596880898261682
+Starting training epoch 53:
+====> Epoch: 53 Time: 19.24 Train Loss: 0.03539823404011818 lr: 0.00030
+Starting val epoch 53:
+====> Epoch: 53 Time: 0.57 Val Loss: 0.032565638852807194
+Starting training epoch 54:
+====> Epoch: 54 Time: 19.24 Train Loss: 0.03524794584761063 lr: 0.00030
+Starting val epoch 54:
+====> Epoch: 54 Time: 0.56 Val Loss: 0.03403168233732382
+Starting training epoch 55:
+====> Epoch: 55 Time: 19.31 Train Loss: 0.03573271973679463 lr: 0.00030
+Starting val epoch 55:
+====> Epoch: 55 Time: 0.56 Val Loss: 0.033807991788937494
+Starting training epoch 56:
+====> Epoch: 56 Time: 19.29 Train Loss: 0.03496408988841069 lr: 0.00030
+Starting val epoch 56:
+====> Epoch: 56 Time: 0.57 Val Loss: 0.03689033394822708
+Starting training epoch 57:
+====> Epoch: 57 Time: 19.30 Train Loss: 0.035641671827015206 lr: 0.00030
+Starting val epoch 57:
+====> Epoch: 57 Time: 0.57 Val Loss: 0.03566657030620636
+Starting training epoch 58:
+====> Epoch: 58 Time: 19.27 Train Loss: 0.034933618833430304 lr: 0.00030
+Starting val epoch 58:
+====> Epoch: 58 Time: 0.57 Val Loss: 0.03424567323273573
+Starting training epoch 59:
+====> Epoch: 59 Time: 19.29 Train Loss: 0.035008041823330595 lr: 0.00030
+Starting val epoch 59:
+====> Epoch: 59 Time: 0.57 Val Loss: 0.03468488123363409
+Starting training epoch 60:
+====> Epoch: 60 Time: 19.27 Train Loss: 0.03493667172315793 lr: 0.00030
+Starting val epoch 60:
+====> Epoch: 60 Time: 0.59 Val Loss: 0.03413071860678685
+Starting training epoch 61:
+====> Epoch: 61 Time: 19.33 Train Loss: 0.034262674134702256 lr: 0.00030
+Starting val epoch 61:
+====> Epoch: 61 Time: 0.57 Val Loss: 0.03415450788079164
+Starting training epoch 62:
+====> Epoch: 62 Time: 19.32 Train Loss: 0.034791900074252716 lr: 0.00030
+Starting val epoch 62:
+====> Epoch: 62 Time: 0.57 Val Loss: 0.03513129795782077
+Starting training epoch 63:
+====> Epoch: 63 Time: 19.27 Train Loss: 0.034729384420773925 lr: 0.00030
+Starting val epoch 63:
+====> Epoch: 63 Time: 0.56 Val Loss: 0.03429150247038939
+Starting training epoch 64:
+====> Epoch: 64 Time: 19.30 Train Loss: 0.03408392344434292 lr: 0.00030
+Starting val epoch 64:
+====> Epoch: 64 Time: 0.56 Val Loss: 0.0332105888101535
+Starting training epoch 65:
+====> Epoch: 65 Time: 19.26 Train Loss: 0.03447167357095541 lr: 0.00030
+Starting val epoch 65:
+====> Epoch: 65 Time: 0.56 Val Loss: 0.035231667260328926
+Starting training epoch 66:
+====> Epoch: 66 Time: 19.34 Train Loss: 0.033802685284843814 lr: 0.00030
+Starting val epoch 66:
+====> Epoch: 66 Time: 0.57 Val Loss: 0.03419300192632736
+Starting training epoch 67:
+====> Epoch: 67 Time: 19.36 Train Loss: 0.03357236904975695 lr: 0.00030
+Starting val epoch 67:
+====> Epoch: 67 Time: 0.57 Val Loss: 0.03469791043645296
+Starting training epoch 68:
+====> Epoch: 68 Time: 19.35 Train Loss: 0.03445293335005259 lr: 0.00030
+Starting val epoch 68:
+====> Epoch: 68 Time: 0.57 Val Loss: 0.03303630139010075
+Starting training epoch 69:
+====> Epoch: 69 Time: 19.36 Train Loss: 0.033595451789024545 lr: 0.00030
+Starting val epoch 69:
+====> Epoch: 69 Time: 0.57 Val Loss: 0.03441616596701818
+Starting training epoch 70:
+====> Epoch: 70 Time: 19.34 Train Loss: 0.03405142917942542 lr: 0.00030
+Starting val epoch 70:
+====> Epoch: 70 Time: 0.59 Val Loss: 0.03357855311762064
+Starting training epoch 71:
+====> Epoch: 71 Time: 19.30 Train Loss: 0.03329232729589328 lr: 0.00030
+Starting val epoch 71:
+====> Epoch: 71 Time: 0.56 Val Loss: 0.03407469501671118
+Starting training epoch 72:
+====> Epoch: 72 Time: 19.33 Train Loss: 0.03369815381578146 lr: 0.00030
+Starting val epoch 72:
+====> Epoch: 72 Time: 0.57 Val Loss: 0.034429337638310895
+Starting training epoch 73:
+====> Epoch: 73 Time: 19.31 Train Loss: 0.033505416785677276 lr: 0.00030
+Starting val epoch 73:
+====> Epoch: 73 Time: 0.56 Val Loss: 0.03483262481406713
+Starting training epoch 74:
+====> Epoch: 74 Time: 19.33 Train Loss: 0.03307959916882026 lr: 0.00027
+Starting val epoch 74:
+====> Epoch: 74 Time: 0.56 Val Loss: 0.03571957163512707
+Starting training epoch 75:
+====> Epoch: 75 Time: 19.37 Train Loss: 0.0328742169130307 lr: 0.00027
+Starting val epoch 75:
+====> Epoch: 75 Time: 0.56 Val Loss: 0.033427067196522005
+Starting training epoch 76:
+====> Epoch: 76 Time: 19.31 Train Loss: 0.03288407884060572 lr: 0.00027
+Starting val epoch 76:
+====> Epoch: 76 Time: 0.56 Val Loss: 0.03353355824947357
+Starting training epoch 77:
+====> Epoch: 77 Time: 19.32 Train Loss: 0.032767340574318016 lr: 0.00027
+Starting val epoch 77:
+====> Epoch: 77 Time: 0.56 Val Loss: 0.03304396550624798
+Starting training epoch 78:
+====> Epoch: 78 Time: 19.33 Train Loss: 0.032876107750985865 lr: 0.00027
+Starting val epoch 78:
+====> Epoch: 78 Time: 0.56 Val Loss: 0.03449613505449051
+Starting training epoch 79:
+====> Epoch: 79 Time: 19.32 Train Loss: 0.032451211871244966 lr: 0.00027
+Starting val epoch 79:
+====> Epoch: 79 Time: 0.58 Val Loss: 0.03224692555765311
+Starting training epoch 80:
+====> Epoch: 80 Time: 19.32 Train Loss: 0.03299303415876168 lr: 0.00027
+Starting val epoch 80:
+====> Epoch: 80 Time: 0.57 Val Loss: 0.03372346862959556
+Starting training epoch 81:
+====> Epoch: 81 Time: 19.37 Train Loss: 0.03231098607946665 lr: 0.00027
+Starting val epoch 81:
+====> Epoch: 81 Time: 0.58 Val Loss: 0.0328026617375704
+Starting training epoch 82:
+====> Epoch: 82 Time: 19.33 Train Loss: 0.03338980917365123 lr: 0.00027
+Starting val epoch 82:
+====> Epoch: 82 Time: 0.57 Val Loss: 0.032184755763946436
+Starting training epoch 83:
+====> Epoch: 83 Time: 19.34 Train Loss: 0.0323263535514856 lr: 0.00027
+Starting val epoch 83:
+====> Epoch: 83 Time: 0.56 Val Loss: 0.032515256164165646
+Starting training epoch 84:
+====> Epoch: 84 Time: 19.31 Train Loss: 0.03172680479593766 lr: 0.00027
+Starting val epoch 84:
+====> Epoch: 84 Time: 0.57 Val Loss: 0.03363470246012394
+Starting training epoch 85:
+====> Epoch: 85 Time: 19.27 Train Loss: 0.03205153351792922 lr: 0.00027
+Starting val epoch 85:
+====> Epoch: 85 Time: 0.56 Val Loss: 0.02989987197976846
+Starting training epoch 86:
+====> Epoch: 86 Time: 19.33 Train Loss: 0.03202731090669449 lr: 0.00027
+Starting val epoch 86:
+====> Epoch: 86 Time: 0.57 Val Loss: 0.033859250302880235
+Starting training epoch 87:
+====> Epoch: 87 Time: 19.37 Train Loss: 0.03302395544373072 lr: 0.00027
+Starting val epoch 87:
+====> Epoch: 87 Time: 0.57 Val Loss: 0.03312857706959431
+Starting training epoch 88:
+====> Epoch: 88 Time: 19.32 Train Loss: 0.03180446727917745 lr: 0.00027
+Starting val epoch 88:
+====> Epoch: 88 Time: 0.56 Val Loss: 0.03232912590297369
+Starting training epoch 89:
+====> Epoch: 89 Time: 19.34 Train Loss: 0.03195645588521774 lr: 0.00027
+Starting val epoch 89:
+====> Epoch: 89 Time: 0.57 Val Loss: 0.033536622539544717
+Starting training epoch 90:
+====> Epoch: 90 Time: 19.27 Train Loss: 0.032264187554709424 lr: 0.00027
+Starting val epoch 90:
+====> Epoch: 90 Time: 0.59 Val Loss: 0.031713235311401196
+Starting training epoch 91:
+====> Epoch: 91 Time: 19.37 Train Loss: 0.0327151618229273 lr: 0.00027
+Starting val epoch 91:
+====> Epoch: 91 Time: 0.57 Val Loss: 0.032181346168120704
+Starting training epoch 92:
+====> Epoch: 92 Time: 19.29 Train Loss: 0.03194365355735406 lr: 0.00027
+Starting val epoch 92:
+====> Epoch: 92 Time: 0.58 Val Loss: 0.031573919006265126
+Starting training epoch 93:
+====> Epoch: 93 Time: 19.33 Train Loss: 0.03154537711674586 lr: 0.00027
+Starting val epoch 93:
+====> Epoch: 93 Time: 0.57 Val Loss: 0.034451972072323166
+Starting training epoch 94:
+====> Epoch: 94 Time: 19.31 Train Loss: 0.03184474202780387 lr: 0.00027
+Starting val epoch 94:
+====> Epoch: 94 Time: 0.58 Val Loss: 0.031727845422350444
+Starting training epoch 95:
+====> Epoch: 95 Time: 19.30 Train Loss: 0.03146614134311676 lr: 0.00027
+Starting val epoch 95:
+====> Epoch: 95 Time: 0.58 Val Loss: 0.0324712874702154
+Starting training epoch 96:
+====> Epoch: 96 Time: 19.30 Train Loss: 0.03139632056729916 lr: 0.00027
+Starting val epoch 96:
+====> Epoch: 96 Time: 0.56 Val Loss: 0.03181473815288299
+Starting training epoch 97:
+====> Epoch: 97 Time: 19.33 Train Loss: 0.03166203104102841 lr: 0.00027
+Starting val epoch 97:
+====> Epoch: 97 Time: 0.57 Val Loss: 0.033048841720208146
+Starting training epoch 98:
+====> Epoch: 98 Time: 19.28 Train Loss: 0.03128747749978151 lr: 0.00027
+Starting val epoch 98:
+====> Epoch: 98 Time: 0.57 Val Loss: 0.03238887831759758
+Starting training epoch 99:
+====> Epoch: 99 Time: 19.34 Train Loss: 0.03141689910433995 lr: 0.00027
+Starting val epoch 99:
+====> Epoch: 99 Time: 0.57 Val Loss: 0.03243132766622763
+Starting training epoch 100:
+====> Epoch: 100 Time: 19.34 Train Loss: 0.03168872345525485 lr: 0.00027
+/home/zzb/pydata/hmp/HumanMAC/utils/visualization.py:54: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig = plt.figure(figsize=(size * ncol, size * nrow))
+Starting val epoch 100:
+====> Epoch: 100 Time: 0.58 Val Loss: 0.030747409909963608
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:37<30:53, 37.83s/it]  4%|▍         | 2/50 [01:15<30:16, 37.84s/it]  6%|▌         | 3/50 [01:53<29:39, 37.85s/it]  8%|▊         | 4/50 [02:31<29:01, 37.86s/it] 10%|█         | 5/50 [03:09<28:23, 37.86s/it] 12%|█▏        | 6/50 [03:47<27:45, 37.86s/it] 14%|█▍        | 7/50 [04:24<27:07, 37.85s/it] 16%|█▌        | 8/50 [05:02<26:29, 37.84s/it] 18%|█▊        | 9/50 [05:40<25:51, 37.83s/it] 20%|██        | 10/50 [06:18<25:13, 37.83s/it] 22%|██▏       | 11/50 [06:56<24:35, 37.83s/it] 24%|██▍       | 12/50 [07:34<23:57, 37.83s/it] 26%|██▌       | 13/50 [08:11<23:19, 37.84s/it] 28%|██▊       | 14/50 [08:49<22:42, 37.84s/it] 30%|███       | 15/50 [09:27<22:04, 37.83s/it] 32%|███▏      | 16/50 [10:05<21:26, 37.83s/it] 34%|███▍      | 17/50 [10:43<20:48, 37.83s/it] 36%|███▌      | 18/50 [11:21<20:10, 37.83s/it] 38%|███▊      | 19/50 [11:58<19:32, 37.83s/it] 40%|████      | 20/50 [12:36<18:55, 37.84s/it] 42%|████▏     | 21/50 [13:14<18:17, 37.84s/it] 44%|████▍     | 22/50 [13:52<17:39, 37.84s/it] 46%|████▌     | 23/50 [14:30<17:01, 37.84s/it] 48%|████▊     | 24/50 [15:08<16:23, 37.84s/it] 50%|█████     | 25/50 [15:46<15:46, 37.84s/it] 52%|█████▏    | 26/50 [16:23<15:08, 37.84s/it] 54%|█████▍    | 27/50 [17:01<14:30, 37.83s/it] 56%|█████▌    | 28/50 [17:39<13:52, 37.83s/it] 58%|█████▊    | 29/50 [18:17<13:14, 37.83s/it] 60%|██████    | 30/50 [18:55<12:36, 37.83s/it] 62%|██████▏   | 31/50 [19:32<11:58, 37.83s/it] 64%|██████▍   | 32/50 [20:10<11:20, 37.83s/it] 66%|██████▌   | 33/50 [20:48<10:43, 37.83s/it] 68%|██████▊   | 34/50 [21:26<10:05, 37.82s/it] 70%|███████   | 35/50 [22:04<09:27, 37.82s/it] 72%|███████▏  | 36/50 [22:42<08:49, 37.82s/it] 74%|███████▍  | 37/50 [23:19<08:11, 37.82s/it] 76%|███████▌  | 38/50 [23:57<07:33, 37.82s/it] 78%|███████▊  | 39/50 [24:35<06:56, 37.82s/it] 80%|████████  | 40/50 [25:13<06:18, 37.83s/it] 82%|████████▏ | 41/50 [25:51<05:40, 37.82s/it] 84%|████████▍ | 42/50 [26:28<05:02, 37.82s/it] 86%|████████▌ | 43/50 [27:06<04:24, 37.82s/it] 88%|████████▊ | 44/50 [27:44<03:46, 37.82s/it] 90%|█████████ | 45/50 [28:22<03:09, 37.82s/it] 92%|█████████▏| 46/50 [29:00<02:31, 37.82s/it] 94%|█████████▍| 47/50 [29:38<01:53, 37.83s/it] 96%|█████████▌| 48/50 [30:15<01:15, 37.83s/it] 98%|█████████▊| 49/50 [30:53<00:37, 37.84s/it]APD: HumanMAC: 6.6734
+ADE: HumanMAC: 0.3830
+FDE: HumanMAC: 0.4899
+MMADE: HumanMAC: 0.5131
+MMFDE: HumanMAC: 0.5470
+100%|██████████| 50/50 [31:40<00:00, 40.42s/it]100%|██████████| 50/50 [31:40<00:00, 38.01s/it]
+Starting training epoch 101:
+====> Epoch: 101 Time: 19.33 Train Loss: 0.03136728736930169 lr: 0.00027
+Starting val epoch 101:
+====> Epoch: 101 Time: 0.57 Val Loss: 0.03347668897074003
+Starting training epoch 102:
+====> Epoch: 102 Time: 19.33 Train Loss: 0.03124657957217632 lr: 0.00027
+Starting val epoch 102:
+====> Epoch: 102 Time: 0.57 Val Loss: 0.03070927802950908
+Starting training epoch 103:
+====> Epoch: 103 Time: 19.28 Train Loss: 0.031240671362059238 lr: 0.00027
+Starting val epoch 103:
+====> Epoch: 103 Time: 0.57 Val Loss: 0.03108975850045681
+Starting training epoch 104:
+====> Epoch: 104 Time: 19.36 Train Loss: 0.031004218169702932 lr: 0.00027
+Starting val epoch 104:
+====> Epoch: 104 Time: 0.56 Val Loss: 0.031065737112210348
+Starting training epoch 105:
+====> Epoch: 105 Time: 19.34 Train Loss: 0.03196063562272451 lr: 0.00027
+Starting val epoch 105:
+====> Epoch: 105 Time: 0.58 Val Loss: 0.032836372271562234
+Starting training epoch 106:
+====> Epoch: 106 Time: 19.35 Train Loss: 0.030659969513997052 lr: 0.00027
+Starting val epoch 106:
+====> Epoch: 106 Time: 0.57 Val Loss: 0.0319935470723953
+Starting training epoch 107:
+====> Epoch: 107 Time: 19.27 Train Loss: 0.031321133295886025 lr: 0.00027
+Starting val epoch 107:
+====> Epoch: 107 Time: 0.57 Val Loss: 0.03287087834607332
+Starting training epoch 108:
+====> Epoch: 108 Time: 19.34 Train Loss: 0.03114826039243967 lr: 0.00027
+Starting val epoch 108:
+====> Epoch: 108 Time: 0.56 Val Loss: 0.03140701277133746
+Starting training epoch 109:
+====> Epoch: 109 Time: 19.34 Train Loss: 0.031056778472012433 lr: 0.00027
+Starting val epoch 109:
+====> Epoch: 109 Time: 0.55 Val Loss: 0.03270945201317469
+Starting training epoch 110:
+====> Epoch: 110 Time: 19.34 Train Loss: 0.03162575756223538 lr: 0.00027
+Starting val epoch 110:
+====> Epoch: 110 Time: 0.59 Val Loss: 0.0319874664911857
+Starting training epoch 111:
+====> Epoch: 111 Time: 19.27 Train Loss: 0.03104680498632101 lr: 0.00027
+Starting val epoch 111:
+====> Epoch: 111 Time: 0.57 Val Loss: 0.031308274190777384
+Starting training epoch 112:
+====> Epoch: 112 Time: 19.25 Train Loss: 0.030720058093086266 lr: 0.00027
+Starting val epoch 112:
+====> Epoch: 112 Time: 0.57 Val Loss: 0.03268964794010688
+Starting training epoch 113:
+====> Epoch: 113 Time: 19.32 Train Loss: 0.03073554121626493 lr: 0.00027
+Starting val epoch 113:
+====> Epoch: 113 Time: 0.58 Val Loss: 0.02981539548207552
+Starting training epoch 114:
+====> Epoch: 114 Time: 19.28 Train Loss: 0.031089019168836947 lr: 0.00027
+Starting val epoch 114:
+====> Epoch: 114 Time: 0.57 Val Loss: 0.031768470763778076
+Starting training epoch 115:
+====> Epoch: 115 Time: 19.32 Train Loss: 0.03124988352259 lr: 0.00027
+Starting val epoch 115:
+====> Epoch: 115 Time: 0.57 Val Loss: 0.03259793874353935
+Starting training epoch 116:
+====> Epoch: 116 Time: 19.30 Train Loss: 0.031020048991418803 lr: 0.00027
+Starting val epoch 116:
+====> Epoch: 116 Time: 0.57 Val Loss: 0.03461925546901348
+Starting training epoch 117:
+====> Epoch: 117 Time: 19.24 Train Loss: 0.031027372850057407 lr: 0.00027
+Starting val epoch 117:
+====> Epoch: 117 Time: 0.56 Val Loss: 0.0334311912361628
+Starting training epoch 118:
+====> Epoch: 118 Time: 19.23 Train Loss: 0.03074952036810991 lr: 0.00027
+Starting val epoch 118:
+====> Epoch: 118 Time: 0.57 Val Loss: 0.03345088899517671
+Starting training epoch 119:
+====> Epoch: 119 Time: 19.25 Train Loss: 0.03022587023293361 lr: 0.00027
+Starting val epoch 119:
+====> Epoch: 119 Time: 0.58 Val Loss: 0.031071584815016158
+Starting training epoch 120:
+====> Epoch: 120 Time: 19.33 Train Loss: 0.030508254540081207 lr: 0.00027
+Starting val epoch 120:
+====> Epoch: 120 Time: 0.58 Val Loss: 0.03156596823380543
+Starting training epoch 121:
+====> Epoch: 121 Time: 19.34 Train Loss: 0.030489716081856154 lr: 0.00027
+Starting val epoch 121:
+====> Epoch: 121 Time: 0.56 Val Loss: 0.033289168507624894
+Starting training epoch 122:
+====> Epoch: 122 Time: 19.33 Train Loss: 0.030691087074004687 lr: 0.00027
+Starting val epoch 122:
+====> Epoch: 122 Time: 0.56 Val Loss: 0.03150026987378414
+Starting training epoch 123:
+====> Epoch: 123 Time: 19.34 Train Loss: 0.030103889045615992 lr: 0.00027
+Starting val epoch 123:
+====> Epoch: 123 Time: 0.56 Val Loss: 0.03134701711436113
+Starting training epoch 124:
+====> Epoch: 124 Time: 19.29 Train Loss: 0.030604429485706183 lr: 0.00027
+Starting val epoch 124:
+====> Epoch: 124 Time: 0.57 Val Loss: 0.03293292458431843
+Starting training epoch 125:
+====> Epoch: 125 Time: 19.29 Train Loss: 0.031026814457697748 lr: 0.00027
+Starting val epoch 125:
+====> Epoch: 125 Time: 0.56 Val Loss: 0.03213782503436773
+Starting training epoch 126:
+====> Epoch: 126 Time: 19.27 Train Loss: 0.030503999437086093 lr: 0.00027
+Starting val epoch 126:
+====> Epoch: 126 Time: 0.56 Val Loss: 0.03280826099216938
+Starting training epoch 127:
+====> Epoch: 127 Time: 19.31 Train Loss: 0.030424703213457877 lr: 0.00027
+Starting val epoch 127:
+====> Epoch: 127 Time: 0.57 Val Loss: 0.03167244500647753
+Starting training epoch 128:
+====> Epoch: 128 Time: 19.30 Train Loss: 0.030276018218734324 lr: 0.00027
+Starting val epoch 128:
+====> Epoch: 128 Time: 0.58 Val Loss: 0.03230238596025186
+Starting training epoch 129:
+====> Epoch: 129 Time: 19.25 Train Loss: 0.030184961688251067 lr: 0.00027
+Starting val epoch 129:
+====> Epoch: 129 Time: 0.57 Val Loss: 0.03259890340268612
+Starting training epoch 130:
+====> Epoch: 130 Time: 19.27 Train Loss: 0.030208484241022515 lr: 0.00027
+Starting val epoch 130:
+====> Epoch: 130 Time: 0.59 Val Loss: 0.033310071302530095
+Starting training epoch 131:
+====> Epoch: 131 Time: 19.33 Train Loss: 0.029769420069761764 lr: 0.00027
+Starting val epoch 131:
+====> Epoch: 131 Time: 0.57 Val Loss: 0.03325607259877217
+Starting training epoch 132:
+====> Epoch: 132 Time: 19.35 Train Loss: 0.03025592376406376 lr: 0.00027
+Starting val epoch 132:
+====> Epoch: 132 Time: 0.57 Val Loss: 0.0320410074140781
+Starting training epoch 133:
+====> Epoch: 133 Time: 19.33 Train Loss: 0.03044524215734922 lr: 0.00027
+Starting val epoch 133:
+====> Epoch: 133 Time: 0.56 Val Loss: 0.03225574847788383
+Starting training epoch 134:
+====> Epoch: 134 Time: 19.29 Train Loss: 0.030364703305829795 lr: 0.00027
+Starting val epoch 134:
+====> Epoch: 134 Time: 0.57 Val Loss: 0.031192132964348182
+Starting training epoch 135:
+====> Epoch: 135 Time: 19.29 Train Loss: 0.02969722271634218 lr: 0.00027
+Starting val epoch 135:
+====> Epoch: 135 Time: 0.57 Val Loss: 0.0299463672324633
+Starting training epoch 136:
+====> Epoch: 136 Time: 19.34 Train Loss: 0.03042338091211441 lr: 0.00027
+Starting val epoch 136:
+====> Epoch: 136 Time: 0.57 Val Loss: 0.03190410151504553
+Starting training epoch 137:
+====> Epoch: 137 Time: 19.30 Train Loss: 0.03014781962459286 lr: 0.00027
+Starting val epoch 137:
+====> Epoch: 137 Time: 0.57 Val Loss: 0.03055001121874039
+Starting training epoch 138:
+====> Epoch: 138 Time: 19.32 Train Loss: 0.029580995020193932 lr: 0.00027
+Starting val epoch 138:
+====> Epoch: 138 Time: 0.57 Val Loss: 0.032076752481934354
+Starting training epoch 139:
+====> Epoch: 139 Time: 19.30 Train Loss: 0.029954609360832433 lr: 0.00027
+Starting val epoch 139:
+====> Epoch: 139 Time: 0.57 Val Loss: 0.03179269565794712
+Starting training epoch 140:
+====> Epoch: 140 Time: 19.32 Train Loss: 0.03019193198818427 lr: 0.00027
+Starting val epoch 140:
+====> Epoch: 140 Time: 0.57 Val Loss: 0.030325057176061165
+Starting training epoch 141:
+====> Epoch: 141 Time: 19.31 Train Loss: 0.029840328682882663 lr: 0.00027
+Starting val epoch 141:
+====> Epoch: 141 Time: 0.56 Val Loss: 0.03133110205332438
+Starting training epoch 142:
+====> Epoch: 142 Time: 19.33 Train Loss: 0.030171264302081023 lr: 0.00027
+Starting val epoch 142:
+====> Epoch: 142 Time: 0.56 Val Loss: 0.032316744805146486
+Starting training epoch 143:
+====> Epoch: 143 Time: 19.29 Train Loss: 0.030119369976604596 lr: 0.00027
+Starting val epoch 143:
+====> Epoch: 143 Time: 0.57 Val Loss: 0.03079873113295971
+Starting training epoch 144:
+====> Epoch: 144 Time: 19.35 Train Loss: 0.03046530675238524 lr: 0.00027
+Starting val epoch 144:
+====> Epoch: 144 Time: 0.57 Val Loss: 0.03177461844797318
+Starting training epoch 145:
+====> Epoch: 145 Time: 19.31 Train Loss: 0.029807314668328335 lr: 0.00027
+Starting val epoch 145:
+====> Epoch: 145 Time: 0.56 Val Loss: 0.031724198745229304
+Starting training epoch 146:
+====> Epoch: 146 Time: 19.31 Train Loss: 0.02969211974205115 lr: 0.00027
+Starting val epoch 146:
+====> Epoch: 146 Time: 0.57 Val Loss: 0.03327747969291149
+Starting training epoch 147:
+====> Epoch: 147 Time: 19.33 Train Loss: 0.029534465384980044 lr: 0.00027
+Starting val epoch 147:
+====> Epoch: 147 Time: 0.55 Val Loss: 0.03221497641733059
+Starting training epoch 148:
+====> Epoch: 148 Time: 19.28 Train Loss: 0.029635270317204487 lr: 0.00027
+Starting val epoch 148:
+====> Epoch: 148 Time: 0.56 Val Loss: 0.032375784447559945
+Starting training epoch 149:
+====> Epoch: 149 Time: 19.29 Train Loss: 0.02950938630562562 lr: 0.00024
+Starting val epoch 149:
+====> Epoch: 149 Time: 0.56 Val Loss: 0.03177999652540072
+Starting training epoch 150:
+====> Epoch: 150 Time: 19.27 Train Loss: 0.029145309372017016 lr: 0.00024
+Starting val epoch 150:
+====> Epoch: 150 Time: 0.59 Val Loss: 0.029929505040248234
+Starting training epoch 151:
+====> Epoch: 151 Time: 19.30 Train Loss: 0.029120989793386214 lr: 0.00024
+Starting val epoch 151:
+====> Epoch: 151 Time: 0.56 Val Loss: 0.03124810607196429
+Starting training epoch 152:
+====> Epoch: 152 Time: 19.31 Train Loss: 0.02872051399392195 lr: 0.00024
+Starting val epoch 152:
+====> Epoch: 152 Time: 0.56 Val Loss: 0.029665679599230107
+Starting training epoch 153:
+====> Epoch: 153 Time: 19.29 Train Loss: 0.02922921295827016 lr: 0.00024
+Starting val epoch 153:
+====> Epoch: 153 Time: 0.57 Val Loss: 0.031423187838532984
+Starting training epoch 154:
+====> Epoch: 154 Time: 19.30 Train Loss: 0.029309245891486986 lr: 0.00024
+Starting val epoch 154:
+====> Epoch: 154 Time: 0.57 Val Loss: 0.032282319254218005
+Starting training epoch 155:
+====> Epoch: 155 Time: 19.27 Train Loss: 0.0287005035732037 lr: 0.00024
+Starting val epoch 155:
+====> Epoch: 155 Time: 0.57 Val Loss: 0.03104061093658973
+Starting training epoch 156:
+====> Epoch: 156 Time: 19.29 Train Loss: 0.028935062507979382 lr: 0.00024
+Starting val epoch 156:
+====> Epoch: 156 Time: 0.58 Val Loss: 0.03180198275890106
+Starting training epoch 157:
+====> Epoch: 157 Time: 19.30 Train Loss: 0.028888481783752258 lr: 0.00024
+Starting val epoch 157:
+====> Epoch: 157 Time: 0.56 Val Loss: 0.030213877224387266
+Starting training epoch 158:
+====> Epoch: 158 Time: 19.26 Train Loss: 0.028982353086272877 lr: 0.00024
+Starting val epoch 158:
+====> Epoch: 158 Time: 0.57 Val Loss: 0.031218416941089507
+Starting training epoch 159:
+====> Epoch: 159 Time: 19.28 Train Loss: 0.0288816067796105 lr: 0.00024
+Starting val epoch 159:
+====> Epoch: 159 Time: 0.58 Val Loss: 0.030415606040220994
+Starting training epoch 160:
+====> Epoch: 160 Time: 19.34 Train Loss: 0.028541562381463173 lr: 0.00024
+Starting val epoch 160:
+====> Epoch: 160 Time: 0.57 Val Loss: 0.03164354998331804
+Starting training epoch 161:
+====> Epoch: 161 Time: 19.35 Train Loss: 0.029248418539571455 lr: 0.00024
+Starting val epoch 161:
+====> Epoch: 161 Time: 0.58 Val Loss: 0.030625098313276585
+Starting training epoch 162:
+====> Epoch: 162 Time: 19.37 Train Loss: 0.02845709202572321 lr: 0.00024
+Starting val epoch 162:
+====> Epoch: 162 Time: 0.57 Val Loss: 0.030642947420859948
+Starting training epoch 163:
+====> Epoch: 163 Time: 19.35 Train Loss: 0.028167317387385246 lr: 0.00024
+Starting val epoch 163:
+====> Epoch: 163 Time: 0.58 Val Loss: 0.031163197106275804
+Starting training epoch 164:
+====> Epoch: 164 Time: 19.33 Train Loss: 0.02879550863439456 lr: 0.00024
+Starting val epoch 164:
+====> Epoch: 164 Time: 0.57 Val Loss: 0.03024695761119708
+Starting training epoch 165:
+====> Epoch: 165 Time: 19.32 Train Loss: 0.029111290933229984 lr: 0.00024
+Starting val epoch 165:
+====> Epoch: 165 Time: 0.57 Val Loss: 0.030594543100167543
+Starting training epoch 166:
+====> Epoch: 166 Time: 19.33 Train Loss: 0.02857166247155804 lr: 0.00024
+Starting val epoch 166:
+====> Epoch: 166 Time: 0.58 Val Loss: 0.031243313629275713
+Starting training epoch 167:
+====> Epoch: 167 Time: 19.31 Train Loss: 0.02865420871724685 lr: 0.00024
+Starting val epoch 167:
+====> Epoch: 167 Time: 0.58 Val Loss: 0.030491255414791595
+Starting training epoch 168:
+====> Epoch: 168 Time: 19.31 Train Loss: 0.02850005366624548 lr: 0.00024
+Starting val epoch 168:
+====> Epoch: 168 Time: 0.56 Val Loss: 0.03181810634067425
+Starting training epoch 169:
+====> Epoch: 169 Time: 19.30 Train Loss: 0.028516076115939096 lr: 0.00024
+Starting val epoch 169:
+====> Epoch: 169 Time: 0.56 Val Loss: 0.03060602253446212
+Starting training epoch 170:
+====> Epoch: 170 Time: 19.27 Train Loss: 0.028669667649918643 lr: 0.00024
+Starting val epoch 170:
+====> Epoch: 170 Time: 0.57 Val Loss: 0.03062318193797882
+Starting training epoch 171:
+====> Epoch: 171 Time: 19.38 Train Loss: 0.02908153385401536 lr: 0.00024
+Starting val epoch 171:
+====> Epoch: 171 Time: 0.58 Val Loss: 0.0312316018419388
+Starting training epoch 172:
+====> Epoch: 172 Time: 19.33 Train Loss: 0.028228156564709467 lr: 0.00024
+Starting val epoch 172:
+====> Epoch: 172 Time: 0.57 Val Loss: 0.03165078827012808
+Starting training epoch 173:
+====> Epoch: 173 Time: 19.30 Train Loss: 0.02859805979503271 lr: 0.00024
+Starting val epoch 173:
+====> Epoch: 173 Time: 0.56 Val Loss: 0.029824927353706114
+Starting training epoch 174:
+====> Epoch: 174 Time: 19.34 Train Loss: 0.028630102841326825 lr: 0.00024
+Starting val epoch 174:
+====> Epoch: 174 Time: 0.57 Val Loss: 0.03187109902501106
+Starting training epoch 175:
+====> Epoch: 175 Time: 19.29 Train Loss: 0.028494899691297457 lr: 0.00024
+Starting val epoch 175:
+====> Epoch: 175 Time: 0.56 Val Loss: 0.030527777205675077
+Starting training epoch 176:
+====> Epoch: 176 Time: 19.24 Train Loss: 0.028248232373824487 lr: 0.00024
+Starting val epoch 176:
+====> Epoch: 176 Time: 0.57 Val Loss: 0.03118435732829265
+Starting training epoch 177:
+====> Epoch: 177 Time: 19.30 Train Loss: 0.028297093357795323 lr: 0.00024
+Starting val epoch 177:
+====> Epoch: 177 Time: 0.57 Val Loss: 0.031160750593512487
+Starting training epoch 178:
+====> Epoch: 178 Time: 19.31 Train Loss: 0.028097648452967406 lr: 0.00024
+Starting val epoch 178:
+====> Epoch: 178 Time: 0.57 Val Loss: 0.032463823134700455
+Starting training epoch 179:
+====> Epoch: 179 Time: 19.29 Train Loss: 0.02936565172022734 lr: 0.00024
+Starting val epoch 179:
+====> Epoch: 179 Time: 0.58 Val Loss: 0.03162988633490526
+Starting training epoch 180:
+====> Epoch: 180 Time: 19.31 Train Loss: 0.02835298283980825 lr: 0.00024
+Starting val epoch 180:
+====> Epoch: 180 Time: 0.59 Val Loss: 0.03118617269091117
+Starting training epoch 181:
+====> Epoch: 181 Time: 19.32 Train Loss: 0.02762005421786736 lr: 0.00024
+Starting val epoch 181:
+====> Epoch: 181 Time: 0.56 Val Loss: 0.031049964424127188
+Starting training epoch 182:
+====> Epoch: 182 Time: 19.32 Train Loss: 0.02801478860231164 lr: 0.00024
+Starting val epoch 182:
+====> Epoch: 182 Time: 0.57 Val Loss: 0.031233318627644807
+Starting training epoch 183:
+====> Epoch: 183 Time: 19.28 Train Loss: 0.028433144035247656 lr: 0.00024
+Starting val epoch 183:
+====> Epoch: 183 Time: 0.58 Val Loss: 0.029625821237762768
+Starting training epoch 184:
+====> Epoch: 184 Time: 19.30 Train Loss: 0.028436983195252907 lr: 0.00024
+Starting val epoch 184:
+====> Epoch: 184 Time: 0.57 Val Loss: 0.03010864531955658
+Starting training epoch 185:
+====> Epoch: 185 Time: 19.27 Train Loss: 0.028610644752207474 lr: 0.00024
+Starting val epoch 185:
+====> Epoch: 185 Time: 0.56 Val Loss: 0.030967305103937786
+Starting training epoch 186:
+====> Epoch: 186 Time: 19.26 Train Loss: 0.028173062124122412 lr: 0.00024
+Starting val epoch 186:
+====> Epoch: 186 Time: 0.57 Val Loss: 0.030293562759955723
+Starting training epoch 187:
+====> Epoch: 187 Time: 19.32 Train Loss: 0.028744543047669605 lr: 0.00024
+Starting val epoch 187:
+====> Epoch: 187 Time: 0.57 Val Loss: 0.030062675428314086
+Starting training epoch 188:
+====> Epoch: 188 Time: 19.28 Train Loss: 0.028418554848012253 lr: 0.00024
+Starting val epoch 188:
+====> Epoch: 188 Time: 0.57 Val Loss: 0.031210418695058577
+Starting training epoch 189:
+====> Epoch: 189 Time: 19.35 Train Loss: 0.02849505891880164 lr: 0.00024
+Starting val epoch 189:
+====> Epoch: 189 Time: 0.57 Val Loss: 0.03120658441613882
+Starting training epoch 190:
+====> Epoch: 190 Time: 19.33 Train Loss: 0.02805538731507766 lr: 0.00024
+Starting val epoch 190:
+====> Epoch: 190 Time: 0.59 Val Loss: 0.031481391487595364
+Starting training epoch 191:
+====> Epoch: 191 Time: 19.33 Train Loss: 0.028694286978302095 lr: 0.00024
+Starting val epoch 191:
+====> Epoch: 191 Time: 0.56 Val Loss: 0.030536756253777407
+Starting training epoch 192:
+====> Epoch: 192 Time: 19.27 Train Loss: 0.028522299034282182 lr: 0.00024
+Starting val epoch 192:
+====> Epoch: 192 Time: 0.57 Val Loss: 0.03217183698255282
+Starting training epoch 193:
+====> Epoch: 193 Time: 19.30 Train Loss: 0.02799060544810998 lr: 0.00024
+Starting val epoch 193:
+====> Epoch: 193 Time: 0.57 Val Loss: 0.03189515671095787
+Starting training epoch 194:
+====> Epoch: 194 Time: 19.30 Train Loss: 0.027859178577096036 lr: 0.00024
+Starting val epoch 194:
+====> Epoch: 194 Time: 0.56 Val Loss: 0.030431960828793354
+Starting training epoch 195:
+====> Epoch: 195 Time: 19.28 Train Loss: 0.028170952840875358 lr: 0.00024
+Starting val epoch 195:
+====> Epoch: 195 Time: 0.57 Val Loss: 0.030140837415670738
+Starting training epoch 196:
+====> Epoch: 196 Time: 19.30 Train Loss: 0.02751206278992005 lr: 0.00024
+Starting val epoch 196:
+====> Epoch: 196 Time: 0.57 Val Loss: 0.03177812834007618
+Starting training epoch 197:
+====> Epoch: 197 Time: 19.28 Train Loss: 0.02842609321173185 lr: 0.00024
+Starting val epoch 197:
+====> Epoch: 197 Time: 0.57 Val Loss: 0.03168466543922058
+Starting training epoch 198:
+====> Epoch: 198 Time: 19.25 Train Loss: 0.027169283625120538 lr: 0.00024
+Starting val epoch 198:
+====> Epoch: 198 Time: 0.57 Val Loss: 0.030220691687785663
+Starting training epoch 199:
+====> Epoch: 199 Time: 19.29 Train Loss: 0.028112230392602775 lr: 0.00024
+Starting val epoch 199:
+====> Epoch: 199 Time: 0.56 Val Loss: 0.030908422401318185
+Starting training epoch 200:
+====> Epoch: 200 Time: 19.29 Train Loss: 0.02763292803309667 lr: 0.00024
+Starting val epoch 200:
+====> Epoch: 200 Time: 0.59 Val Loss: 0.031304675608109206
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:37<30:54, 37.84s/it]  4%|▍         | 2/50 [01:15<30:16, 37.85s/it]  6%|▌         | 3/50 [01:53<29:39, 37.86s/it]  8%|▊         | 4/50 [02:31<29:02, 37.87s/it] 10%|█         | 5/50 [03:09<28:24, 37.88s/it] 12%|█▏        | 6/50 [03:47<27:46, 37.87s/it] 14%|█▍        | 7/50 [04:25<27:08, 37.87s/it] 16%|█▌        | 8/50 [05:02<26:29, 37.86s/it] 18%|█▊        | 9/50 [05:40<25:51, 37.85s/it] 20%|██        | 10/50 [06:18<25:13, 37.85s/it] 22%|██▏       | 11/50 [06:56<24:35, 37.84s/it] 24%|██▍       | 12/50 [07:34<23:58, 37.84s/it] 26%|██▌       | 13/50 [08:12<23:20, 37.85s/it] 28%|██▊       | 14/50 [08:49<22:42, 37.85s/it] 30%|███       | 15/50 [09:27<22:04, 37.85s/it] 32%|███▏      | 16/50 [10:05<21:27, 37.86s/it] 34%|███▍      | 17/50 [10:43<20:49, 37.86s/it] 36%|███▌      | 18/50 [11:21<20:11, 37.86s/it] 38%|███▊      | 19/50 [11:59<19:33, 37.86s/it] 40%|████      | 20/50 [12:37<18:55, 37.86s/it] 42%|████▏     | 21/50 [13:14<18:17, 37.85s/it] 44%|████▍     | 22/50 [13:52<17:39, 37.86s/it] 46%|████▌     | 23/50 [14:30<17:02, 37.86s/it] 48%|████▊     | 24/50 [15:08<16:24, 37.86s/it] 50%|█████     | 25/50 [15:46<15:46, 37.86s/it] 52%|█████▏    | 26/50 [16:24<15:08, 37.85s/it] 54%|█████▍    | 27/50 [17:02<14:30, 37.85s/it] 56%|█████▌    | 28/50 [17:39<13:52, 37.85s/it] 58%|█████▊    | 29/50 [18:17<13:14, 37.85s/it] 60%|██████    | 30/50 [18:55<12:36, 37.85s/it] 62%|██████▏   | 31/50 [19:33<11:59, 37.85s/it] 64%|██████▍   | 32/50 [20:11<11:21, 37.85s/it] 66%|██████▌   | 33/50 [20:49<10:43, 37.85s/it] 68%|██████▊   | 34/50 [21:27<10:05, 37.85s/it] 70%|███████   | 35/50 [22:04<09:27, 37.85s/it] 72%|███████▏  | 36/50 [22:42<08:49, 37.86s/it] 74%|███████▍  | 37/50 [23:20<08:12, 37.86s/it] 76%|███████▌  | 38/50 [23:58<07:34, 37.86s/it] 78%|███████▊  | 39/50 [24:36<06:56, 37.86s/it] 80%|████████  | 40/50 [25:14<06:18, 37.86s/it] 82%|████████▏ | 41/50 [25:52<05:40, 37.86s/it] 84%|████████▍ | 42/50 [26:29<05:02, 37.86s/it] 86%|████████▌ | 43/50 [27:07<04:25, 37.86s/it] 88%|████████▊ | 44/50 [27:45<03:47, 37.86s/it] 90%|█████████ | 45/50 [28:23<03:09, 37.86s/it] 92%|█████████▏| 46/50 [29:01<02:31, 37.86s/it] 94%|█████████▍| 47/50 [29:39<01:53, 37.86s/it] 96%|█████████▌| 48/50 [30:17<01:15, 37.86s/it] 98%|█████████▊| 49/50 [30:54<00:37, 37.86s/it]APD: HumanMAC: 6.1092
+ADE: HumanMAC: 0.3745
+FDE: HumanMAC: 0.4838
+MMADE: HumanMAC: 0.5146
+MMFDE: HumanMAC: 0.5476
+100%|██████████| 50/50 [31:38<00:00, 39.70s/it]100%|██████████| 50/50 [31:38<00:00, 37.98s/it]
+Starting training epoch 201:
+====> Epoch: 201 Time: 19.30 Train Loss: 0.02776380754195345 lr: 0.00024
+Starting val epoch 201:
+====> Epoch: 201 Time: 0.57 Val Loss: 0.030015078015052356
+Starting training epoch 202:

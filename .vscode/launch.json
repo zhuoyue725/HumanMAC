@@ -17,6 +17,26 @@
                 "--save_gif_interval",
                 "10"
             ],
+            // nohup python main.py --cfg h36m --mode train
+            // nohup python main.py --cfg humaneva --mode train
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Evaluate h36m",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "args": [
+                "--cfg",
+                "h36m",
+                "--mode",
+                "eval",
+                "--ckpt",
+                "./results/h36m_2/models/ckpt_ema_200.pt"
+            ],
+            // nohup python main.py --cfg h36m --mode eval --ckpt ./results/h36m_2/models/ckpt_ema_200.pt
+            // nohup python main.py --cfg humaneva --mode train
             "console": "integratedTerminal",
             "justMyCode": true
         }
